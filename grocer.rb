@@ -117,7 +117,7 @@ def checkout(cart, coupons)
 
   i = 0
   while i < consolidate_cart(cart).length do
-    if consolidate_cart(cart).length == 1
+    # if consolidate_cart(cart).length == 1
       item_price = consolidate_cart(cart)[i][:price]
       item_num = consolidate_cart(cart)[i][:count]
       # item_price = apply_coupons(cart, coupons)
@@ -133,7 +133,7 @@ def checkout(cart, coupons)
         if coupon_cart[i][:clearance] == true
           total = apply_clearance(cart)[i][:price]
         end
-      end
+      # end
 
 
 
