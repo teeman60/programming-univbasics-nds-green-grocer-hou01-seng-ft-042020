@@ -117,11 +117,14 @@ def checkout(cart, coupons)
 
   i = 0
   while i < consolidate_cart(cart).length do
-    # if consolidate_cart(cart).length == 1
-      item_price = consolidate_cart(cart)[i][:price]
+    if coupons
+      # item_price = consolidate_cart(cart)[i][:price]
       item_num = consolidate_cart(cart)[i][:count]
-      # item_price = apply_coupons(cart, coupons)
+      item_price = apply_coupons(consolidate_cart(cart), coupons)
       total = item_price * item_num
+    end
+    item_price = consolidate_cart(cart)[i][:price]
+    total = item_price * item_num
     # else
     #   ind = 0
     #   while ind < apply_coupons(cart, coupons).length do
@@ -129,11 +132,11 @@ def checkout(cart, coupons)
     #     ind += 1
     #   end
     # end
-    coupon_cart = apply_coupons(consolidate_cart(cart), [])
-        if coupon_cart[i][:clearance] == true
-          total = apply_clearance(cart)[i][:price]
-        end
-      # end
+    # coupon_cart = apply_coupons(consolidate_cart(cart), [])
+    if consolidate_cart(cart)[i][:clearance] == true
+        total = apply_clearance(cart)[i][:price]
+    end
+    total = apply_clearance[i][:price]
 
 
 
