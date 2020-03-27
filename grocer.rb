@@ -125,12 +125,12 @@ def checkout(cart, coupons)
 #       total += (item_price * item_num)
 #       i += 1
 #   end
-# 
+#
 # if total > 100
 #   total = (total-(total*0.1)).round(2)
 # end
 #   # binding.pry
-# 
+#
 # end
 
 consolidated_cart = consolidate_cart(cart)
@@ -147,4 +147,4 @@ consolidated_cart = consolidate_cart(cart)
    total -= total * 0.1
  end
  total
-end	
+end
