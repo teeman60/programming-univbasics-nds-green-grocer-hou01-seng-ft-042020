@@ -143,7 +143,7 @@ consolidated_cart = consolidate_cart(cart)
    total += item[:price] * item[:count]
    item_index += 1
  end
- if total >= 100
+ if total > 100
    total -= total * 0.1
  end
  total
