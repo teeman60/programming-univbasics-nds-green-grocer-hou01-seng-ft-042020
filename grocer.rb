@@ -117,7 +117,7 @@ def checkout(cart, coupons)
 
   i = 0
   while i < consolidate_cart(cart).length do
-    if !consolidate_cart(cart).include?(coupons)
+    if !consolidate_cart(cart).include?()
       item_price = consolidate_cart(cart)[i][:price]
       item_num = consolidate_cart(cart)[i][:count]
       total = item_price * item_num
