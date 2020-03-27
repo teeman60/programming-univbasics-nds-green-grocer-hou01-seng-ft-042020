@@ -144,5 +144,6 @@ if total > 100
   total *= 0.1
 end
   # binding.pry
+  total
 
 end
