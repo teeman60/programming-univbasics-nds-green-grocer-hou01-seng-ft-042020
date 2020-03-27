@@ -140,7 +140,9 @@ def checkout(cart, coupons)
     # end
     # total = apply_clearance[i][:price]
 
-total
+if total > 100
+  total *= 0.1
+end
   # binding.pry
 
 end
