@@ -139,24 +139,10 @@ def checkout(cart, coupons)
 #     #     total = apply_clearance(cart)[i][:price]
 #     # end
 #     # total = apply_clearance[i][:price]
-#
+# 
 # if total > 100
 #   total = (total-(total*0.1)).round(2)
 # end
   # binding.pry
-  newcart=consolidate_cart(cart)
-apply_coupons(newcart,coupons)
-apply_clearance(newcart)
-counter=0
-total=0
-while counter<newcart.length do
-total+=(newcart[counter][:price] * newcart[counter][:count]).round(2)
-counter+=1
-end
-
-if total > 100
-total= (total-(total*0.1)).round(2)
-end
-
-total
+    
 end
