@@ -121,6 +121,7 @@ def checkout(cart, coupons)
       item_num = new_cart[i][:count]
       item_price = new_cart[i][:price]
       total += item_price * item_num
+      i += 1
   end
     # item_price = consolidate_cart(cart)[i][:price]
     # total = item_price * item_num
@@ -136,13 +137,7 @@ def checkout(cart, coupons)
     #     total = apply_clearance(cart)[i][:price]
     # end
     # total = apply_clearance[i][:price]
-
-
-
-
-
-    i += 1
-  end
+  
 total
   # binding.pry
 
