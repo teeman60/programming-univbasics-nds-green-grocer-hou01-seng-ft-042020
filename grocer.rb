@@ -136,6 +136,6 @@ def checkout(cart, coupons)
     i += 1
   end
 total
-  # binding.pry
+  binding.pry
 
 end
