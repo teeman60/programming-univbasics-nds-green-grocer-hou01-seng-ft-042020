@@ -134,14 +134,14 @@ def checkout(cart, coupons)
           total = apply_clearance(cart)[i][:price]
         end
       end
-        
-        
-    
+
+
+
 
 
     i += 1
   end
 total
-  binding.pry
+  # binding.pry
 
 end
