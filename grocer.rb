@@ -114,53 +114,22 @@ def checkout(cart, coupons)
   #
   # BEFORE it begins the work of calculating the total (or else you might have
   # some irritated customers
-#   new_cart = consolidate_cart(cart)
-#   couponed = apply_coupons(new_cart, coupons)
-#   final = apply_clearance(couponed)
-#   total = 0
-#   i = 0
-#   while i < final.length do
-#       item_num = new_cart[i][:count]
-#       item_price = new_cart[i][:price].round(2)
-#       total += (item_price * item_num)
-#       i += 1
-#   end
-#
-# if total > 100
-#   total = (total-(total*0.1)).round(2)
-# end
-#   # binding.pry
-#
-# end
+  new_cart = consolidate_cart(cart)
+  couponed = apply_coupons(new_cart, coupons)
+  final = apply_clearance(couponed)
+  total = 0
+  i = 0
+  while i < final.length do
+      item_num = new_cart[i][:count]
+      item_price = new_cart[i][:price].round(2)
+      total += (item_price * item_num)
+      i += 1
+  end
 
-# consolidated_cart = consolidate_cart(cart)
-#  coupon_applied_cart = apply_coupons(consolidated_cart, coupons)
-#  final_cart = apply_clearance(coupon_applied_cart)
-#  total = 0
-#  item_index = 0
-#  while final_cart[item_index] do
-#    item = final_cart[item_index]
-#    total += item[:price] * item[:count]
-#    item_index += 1
-#  end
-#  if total > 100
-#    total -= total * 0.1
-#  end
-#  total
-# end
-
-
-consolidated_cart = consolidate_cart(cart)
- coupon_applied_cart = apply_coupons(consolidated_cart, coupons)
- final_cart = apply_clearance(coupon_applied_cart)
- total = 0
- index = 0
- while final_cart[index] do
-   total += final_cart[index][:price] * final_cart[index][:count]
-   index += 1
- end
- if total > 100
-   total -= (0.1 * total)
- end
- total
+if total > 100
+  total = (total-(total*0.1)).round(2)
 end
+  # binding.pry
+
+end
+
